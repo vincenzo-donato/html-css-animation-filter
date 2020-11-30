@@ -1,0 +1,282 @@
+/* start ex-1 */
+.ex-1-square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    transition: background 3s;
+}
+
+.ex-1-square:hover{
+  background-color: red;
+}
+/* end ex-1 */
+
+/* start ex-2 */
+.ex-2-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 5s;
+}
+
+.ex-2-square:active{
+  width: 100%;
+}
+/* end ex-2 */
+
+/* start ex-3 */
+.ex-3-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 5s;
+}
+
+.ex-3-square:hover{
+  border-radius: 50%;
+}
+/* end ex-3 */
+
+/* start ex-4 */
+.ex-4-square {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: 2s;
+}
+
+.ex-4-square:hover{
+ opacity: 0;
+}
+/* end ex-4 */
+
+/* start ex-5 */
+.ex-5-square {
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    background: red;
+    transition: 4s;
+}
+
+.ex-5-square:hover{
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+
+.ex-5-square:active{
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+}
+/* end ex-5 */
+
+/* start ex-6/7/8 */
+.ex-6-img, .ex-7-img, .ex-8-img {
+    width: 500px;
+    transition: 4s;
+}
+
+
+ /* start ex-6 */
+.ex-6-img{
+  transition: 0s;
+}
+
+.ex-6-img:hover{
+  filter: grayscale(100%);
+}
+/* end ex-6 */
+
+
+/* start ex-7 */
+.ex-7-img:hover{
+  filter: sepia(50%) opacity(50%);
+}
+/* end ex-7 */
+
+
+/* start ex-8 */
+.ex-8-img:active{
+  filter: sepia(50%) opacity(50%);
+}
+
+.ex-8-img:hover{
+  border-radius: 15px;
+}
+/* end ex-8 */
+
+
+/* start ex-9 */
+.ex-9-img {
+    margin: 50px 100px;
+    width: 400px;
+    transition: 3s;
+}
+
+.ex-9-img:hover{
+  border-radius: 15px;
+  filter: drop-shadow(16px 16px 16px red) hue-rotate(80deg);
+  transform: scale(1.5);
+}
+/* end ex-9 */
+
+
+/* start ex-10 */
+.ex-10-icon {
+    font-size: 60px;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(5turn);
+  }
+}
+
+/* end ex-10 */
+
+
+/* start ex-11 */
+.ex-11-icon {
+    font-size: 60px;
+    animation: alf-rotation 3s linear infinite;
+}
+
+@keyframes alf-rotation {
+    90% {
+        transform: rotate(290deg);
+    }
+}
+
+/* end ex-11 */
+
+/* start ex-12/13*/
+.ex-12-button, .ex-13-button {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 70px;
+    text-transform: uppercase;
+    border: 3px solid #1b3c59;
+    color: #1b3c59;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+.ex-12-top-white, .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+.ex-12-bottom-white, .ex-13-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+}
+
+/* start ex-12 */
+.ex-12-button:hover .ex-12-top-white {
+    animation: border-alf-rotation 1s linear infinite;
+}
+
+@keyframes border-alf-rotation {
+    50% {
+        left: calc(100% - 60px);
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: border-alf-rotation-2 1s linear infinite;
+}
+
+@keyframes border-alf-rotation-2 {
+    50% {
+        right: calc(100% - 60px);
+    }
+}
+
+.ex-12-button:hover{
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid red;
+  color: red;
+}
+/* end ex-12 */
+
+
+/* start ex-13 */
+.ex-13-top-white{
+    animation: border-rotation-sopra 2s linear infinite;
+}
+
+@keyframes border-rotation-sopra {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+
+.ex-13-bottom-white {
+    animation: border-rotation-sotto 2s linear infinite;
+}
+
+@keyframes border-rotation-sotto {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
+
+.ex-13-button:hover{
+  background-color: lightgrey;
+  border-radius: 20px;
+}
